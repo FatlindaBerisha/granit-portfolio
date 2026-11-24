@@ -33,8 +33,8 @@ export const content = {
       location: 'Prishtinë, Kosovë',
       stats: [
         { value: '2+', label: 'vjet në industri' },
-        { value: '6', label: 'servo në krahun robotik' },
-        { value: '3', label: 'projekte 3D interaktive' },
+        { value: 'ATM · CDM', label: 'sisteme bankare' },
+        { value: 'Inventor', label: 'mjeti kryesor CAD' },
         { value: 'B2', label: 'Gjermanisht' },
       ],
     },
@@ -42,7 +42,7 @@ export const content = {
       kicker: '01 / Rreth meje',
       title: 'Mekanikë, elektronikë dhe softuer në një sistem',
       text:
-        'Jam inxhinier i mekatronikës nga Prishtina, me përvojë praktike në sistemet bankare ATM, CDM dhe GRG dhe me pasion për robotikën dhe automatizimin. Më pëlqen të punoj aty ku takohen mekanika, elektronika dhe softueri: nga modeli i parë 3D në Autodesk Inventor deri te testi i fundit në terren. Punoj në mënyrë të strukturuar, mendoj gjithmonë për zgjidhjen dhe ndihem mirë në ekipe ndërkulturore.',
+        'Jam inxhinier i mekatronikës nga Drenasi, me përvojë praktike në sistemet bankare ATM, CDM dhe GRG dhe me pasion për robotikën dhe automatizimin. Më pëlqen të punoj aty ku takohen mekanika, elektronika dhe softueri: nga modeli i parë 3D në Autodesk Inventor deri te testi i fundit në terren. Punoj në mënyrë të strukturuar, mendoj gjithmonë për zgjidhjen dhe ndihem mirë në ekipe ndërkulturore.',
       facts: [
         { icon: 'MapPin', label: 'Vendndodhja', value: 'Prishtinë, Kosovë' },
         { icon: 'GraduationCap', label: 'Studimet', value: 'Master në Inxhinieri Mekanike' },
@@ -249,7 +249,7 @@ export const content = {
       linkedinValue: 'Shiko profilin',
     },
     footer: {
-      tagline: 'Inxhinier i Mekatronikës nga Prishtina. Projektoj, ndërtoj dhe automatizoj sisteme mekatronike.',
+      tagline: 'Inxhinier i Mekatronikës nga Drenasi. Projektoj, ndërtoj dhe automatizoj sisteme mekatronike.',
       navTitle: 'Navigimi',
       contactTitle: 'Kontakti',
       rights: 'Të gjitha të drejtat e rezervuara.',
@@ -283,8 +283,8 @@ export const content = {
       location: 'Prishtina, Kosovo',
       stats: [
         { value: '2+', label: 'Jahre in der Industrie' },
-        { value: '6', label: 'Servos im Roboterarm' },
-        { value: '3', label: 'interaktive 3D-Projekte' },
+        { value: 'ATM · CDM', label: 'Banksysteme' },
+        { value: 'Inventor', label: 'CAD-Hauptwerkzeug' },
         { value: 'B2', label: 'Deutsch' },
       ],
     },
@@ -292,7 +292,7 @@ export const content = {
       kicker: '01 / Über mich',
       title: 'Mechanik, Elektronik und Software in einem System',
       text:
-        'Ich bin Mechatronik-Ingenieur aus Prishtina mit praktischer Erfahrung in ATM-, CDM- und GRG-Banksystemen und einer Leidenschaft für Robotik und Automatisierung. Am liebsten arbeite ich dort, wo Mechanik, Elektronik und Software zusammenkommen: vom ersten 3D-Modell in Autodesk Inventor bis zum finalen Test vor Ort. Ich arbeite strukturiert, denke lösungsorientiert und fühle mich in interkulturellen Teams wohl.',
+        'Ich bin Mechatronik-Ingenieur aus Drenas mit praktischer Erfahrung in ATM-, CDM- und GRG-Banksystemen und einer Leidenschaft für Robotik und Automatisierung. Am liebsten arbeite ich dort, wo Mechanik, Elektronik und Software zusammenkommen: vom ersten 3D-Modell in Autodesk Inventor bis zum finalen Test vor Ort. Ich arbeite strukturiert, denke lösungsorientiert und fühle mich in interkulturellen Teams wohl.',
       facts: [
         { icon: 'MapPin', label: 'Standort', value: 'Prishtina, Kosovo' },
         { icon: 'GraduationCap', label: 'Studium', value: 'Master in Maschinenbau' },
@@ -499,7 +499,7 @@ export const content = {
       linkedinValue: 'Profil ansehen',
     },
     footer: {
-      tagline: 'Mechatronik-Ingenieur aus Prishtina. Ich konstruiere, baue und automatisiere mechatronische Systeme.',
+      tagline: 'Mechatronik-Ingenieur aus Drenas. Ich konstruiere, baue und automatisiere mechatronische Systeme.',
       navTitle: 'Navigation',
       contactTitle: 'Kontakt',
       rights: 'Alle Rechte vorbehalten.',

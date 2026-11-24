@@ -1,6 +1,6 @@
-import { Bot, Building2, Landmark, MapPin, GraduationCap, Languages, Car, Cpu, DraftingCompass, Globe, Wrench } from 'lucide-react'
+import { Bot, Building2, Landmark, MapPin, GraduationCap, Languages, Car, Cpu, DraftingCompass, Globe, Wrench, BriefcaseBusiness } from 'lucide-react'
 
-const MAP = { Bot, Building2, Landmark, MapPin, GraduationCap, Languages, Car, Cpu, DraftingCompass, Globe, Wrench }
+const MAP = { Bot, Building2, Landmark, MapPin, GraduationCap, Languages, Car, Cpu, DraftingCompass, Globe, Wrench, BriefcaseBusiness }
 
 export default function Icon({ name, ...props }) {
   const C = MAP[name]

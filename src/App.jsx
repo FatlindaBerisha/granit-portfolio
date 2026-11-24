@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   ArrowRight, ArrowUpRight, Award, BriefcaseBusiness, CalendarDays, Check, Code2, Copy, Cpu,
   Eye, EyeOff, Languages as LangIcon, Mail, MapPin, Menu, MousePointerClick, Phone, Rotate3d,
@@ -8,7 +8,7 @@ import { content, profile } from './i18n.js'
 import { MARQUEE, SOFTWARE, autodeskLogo, blenderLogo } from './tools.js'
 import LazyScene from './components/LazyScene.jsx'
 import Icon, { LinkedinIcon } from './components/Icon.jsx'
-import { Counter, ExternalLink, Flag, LangDropdown, Logo, Marquee, SectionHead, ToolLogo, Typewriter, useScrollProgress, useSpotlight } from './components/ui.jsx'
+import { Counter, ExternalLink, Flag, LangDropdown, Logo, Marquee, SectionHead, ToolLogo, Typewriter, useSpotlight } from './components/ui.jsx'
 import { RobotPanel } from './components/robot.jsx'
 import { createArm } from './three/armController.js'
 import useReveal from './useReveal.js'
@@ -36,7 +36,6 @@ export default function App() {
   const t = content[lang]
   useReveal(lang)
   useSpotlight()
-  const progress = useScrollProgress()
 
   useEffect(() => {
     document.documentElement.lang = lang
@@ -50,7 +49,6 @@ export default function App() {
 
   return (
     <>
-      <div className="progress" style={{ transform: `scaleX(${progress})` }} />
       <div className="bg-grid" aria-hidden="true" />
       <div className="bg-noise" aria-hidden="true" />
       <Navbar t={t} lang={lang} setLang={setLang} />
@@ -89,7 +87,6 @@ export default function App() {
           </div>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Granit Kurrumeli. {t.footer.rights}</span>
-            <span className="mono footer-made">{t.footer.made}</span>
             <a href="#top" className="to-top">{t.footer.top} <ArrowUp size={14} /></a>
           </div>
         </div>
@@ -249,14 +246,41 @@ function About({ t }) {
 
 /* ------------------------------------------------------------------ experience */
 function Experience({ t }) {
+  // the job card that has scrolled past ~55% of the viewport becomes active; the line fills down to it
+  const ref = useRef(null)
+  const [active, setActive] = useState(0)
+  const [fill, setFill] = useState(0)
+  useEffect(() => {
+    const onScroll = () => {
+      const el = ref.current
+      if (!el) return
+      const mid = window.innerHeight * 0.55
+      let a = 0
+      el.querySelectorAll('.tl-item').forEach((it, i) => {
+        if (it.getBoundingClientRect().top < mid) a = i
+      })
+      setActive(a)
+      const r = el.getBoundingClientRect()
+      setFill(Math.max(0, Math.min(1, (mid - r.top) / r.height)))
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+    }
+  }, [])
+
   return (
     <section id="experience" className="section container">
       <SectionHead kicker={t.experience.kicker} title={t.experience.title} />
-      <div className="timeline">
-        {t.experience.jobs.map((job) => (
+      <div className="timeline" ref={ref}>
+        <span className="tl-progress" style={{ transform: `scaleY(${fill})` }} aria-hidden="true" />
+        {t.experience.jobs.map((job, i) => (
           <article key={job.company} className="tl-item reveal">
-            <span className={`tl-dot ${job.current ? 'live' : ''}`} />
-            <div className="card spot job">
+            <span className={`tl-dot ${i <= active ? 'active' : ''} ${i === active ? 'current' : ''}`} />
+            <div className={`card spot job ${i === active ? 'is-active' : ''}`}>
               <div className="job-head">
                 <span className="monogram">{job.icon ? <Icon name={job.icon} size={22} /> : job.company.slice(0, 2).toUpperCase()}</span>
                 <div className="job-title">
@@ -399,6 +423,7 @@ function Skills({ t }) {
         </div>
       </div>
 
+      <div className="sk-lower">
       <div className="sk-groups">
         {s.groups.map((g, i) => (
           <div key={g.title} className="card spot sk-group reveal" style={{ transitionDelay: `${i * 70}ms` }}>
@@ -434,6 +459,7 @@ function Skills({ t }) {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
