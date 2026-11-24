@@ -595,3 +595,7 @@ a.ccard:hover .ccard-value { color: var(--accent); }
   .hero-center .tagline { font-size: 1rem; }
   .hero-center .cta { width: 100%; }
 }
+.sk-grid { grid-template-columns: repeat(4, 1fr); }
+.sk-grid .sw { flex-direction: column; align-items: flex-start; gap: 12px; padding: 18px 16px; }
+@media (max-width: 1100px) { .sk-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 760px) { .sk-grid { grid-template-columns: 1fr 1fr; } }

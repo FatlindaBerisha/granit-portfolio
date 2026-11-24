@@ -16,16 +16,16 @@ export const SOFTWARE = [
   { name: 'Python', img: python },
   { name: 'MATLAB', img: matlab },
   { name: 'LabVIEW', img: labview },
+  { name: 'Blender', img: blender },
+  { key: 'plc', Icon: Cpu },
 ]
 
 /** Marquee items; `key` entries get a translated name from i18n `tools`. */
 export const MARQUEE = [
   ...SOFTWARE,
-  { key: 'plc', Icon: Cpu },
   { key: 'atm', Icon: Landmark },
   { name: 'Hikvision CCTV', Icon: Cctv },
   { key: 'robotics', Icon: Bot },
-  { name: 'Blender', img: blender },
 ]
 
 export { autodesk as autodeskLogo, blender as blenderLogo }

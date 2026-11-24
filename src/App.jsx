@@ -388,11 +388,11 @@ function Skills({ t }) {
         </div>
         <div className="sk-grid">
           {rest.map((sw, i) => (
-            <div key={sw.name} className="sw spot reveal" style={{ transitionDelay: `${i * 50}ms` }}>
+            <div key={sw.name || sw.key} className="sw spot reveal" style={{ transitionDelay: `${i * 50}ms` }}>
               <span className="sw-mono"><ToolLogo tool={sw} size={24} /></span>
               <span className="sw-text">
-                <strong>{sw.name}</strong>
-                <span>{s.captions[sw.name]}</span>
+                <strong>{sw.name || t.tools[sw.key]}</strong>
+                <span>{s.captions[sw.name || sw.key]}</span>
               </span>
             </div>
           ))}

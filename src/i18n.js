@@ -182,7 +182,7 @@ export const content = {
     skills: {
       kicker: '04 / Aftësitë',
       title: 'Mjetet dhe aftësitë e mia',
-      subtitle: 'Nga dizajni në Autodesk Inventor te programimi dhe instalimi në terren.',
+      subtitle: 'Nga dizajni në Autodesk Inventor dhe vizualizimi në Blender te programimi dhe instalimi në terren.',
       primary: 'Mjeti kryesor',
       captions: {
         'Autodesk Inventor': 'Modelim 3D, montime dhe vizatime teknike. Të gjitha modulet e mia i projektoj këtu.',
@@ -192,6 +192,8 @@ export const content = {
         Python: 'Programim & automatizim',
         MATLAB: 'Analizë & simulim',
         LabVIEW: 'Matje & kontroll',
+        Blender: 'Modelim, render & 3D për web',
+        plc: 'Programim & automatizim industrial',
       },
       groups: [
         { icon: 'Cpu', title: 'Automatizim & kontroll', items: ['Programim SPS/PLC', 'Robotikë & servomotorë', 'Sensorë & kalibrim', 'Teknikë automatizimi'] },
@@ -430,7 +432,7 @@ export const content = {
     skills: {
       kicker: '04 / Kenntnisse',
       title: 'Meine Tools & Fähigkeiten',
-      subtitle: 'Von der Konstruktion in Autodesk Inventor bis zur Programmierung und Installation vor Ort.',
+      subtitle: 'Von der Konstruktion in Autodesk Inventor und der Visualisierung in Blender bis zur Programmierung und Installation vor Ort.',
       primary: 'Hauptwerkzeug',
       captions: {
         'Autodesk Inventor': '3D-Modellierung, Baugruppen und technische Zeichnungen. Alle meine Module konstruiere ich hier.',
@@ -440,6 +442,8 @@ export const content = {
         Python: 'Programmierung & Automatisierung',
         MATLAB: 'Analyse & Simulation',
         LabVIEW: 'Messen & Steuern',
+        Blender: 'Modellierung, Rendering & 3D fürs Web',
+        plc: 'Industrielle Automatisierung',
       },
       groups: [
         { icon: 'Cpu', title: 'Automatisierung & Steuerung', items: ['SPS/PLC-Programmierung', 'Robotik & Servomotoren', 'Sensorik & Kalibrierung', 'Automatisierungstechnik'] },
